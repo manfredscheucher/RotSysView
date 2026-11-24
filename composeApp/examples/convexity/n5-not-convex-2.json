@@ -1,0 +1,11 @@
+{
+  "name": "n5-not-convex-2",
+  "n": 5,
+  "group": "Not convex or not h-convex",
+  "label": "n5-not-convex-2",
+  "description": "Drawable, not convex: T5 (convex obstruction with 5 crossings).",
+  "source": "rotsys-sat rotsys.py",
+  "rotation_systems": [
+    [[1,2,3,4],[0,2,3,4],[0,1,3,4],[0,1,4,2],[0,1,3,2]]
+  ]
+}

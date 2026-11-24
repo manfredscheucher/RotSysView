@@ -1,0 +1,11 @@
+{
+  "name": "n8-unlucky",
+  "n": 8,
+  "group": "Empty triangles",
+  "label": "n8-unlucky",
+  "description": "The only drawing on at most 9 vertices without a lucky vertex (Section 4.3); 2n−4 = 12 empty triangles.",
+  "source": "rotsys-sat examples/empty_triangles/n8unlucky.json0",
+  "rotation_systems": [
+    [[1,2,3,4,5,6,7],[0,2,3,6,5,7,4],[0,7,3,6,1,4,5],[0,7,6,2,1,4,5],[0,1,7,6,5,2,3],[0,7,4,1,2,6,3],[0,7,3,5,2,4,1],[0,2,3,4,5,6,1]]
+  ]
+}

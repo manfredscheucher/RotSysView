@@ -1,0 +1,11 @@
+{
+  "name": "n6-not-hconvex",
+  "n": 6,
+  "group": "Not convex or not h-convex",
+  "label": "n6-not-hconvex",
+  "description": "Convex, not h-convex: Π6oh.",
+  "source": "rotsys-sat rotsys.py",
+  "rotation_systems": [
+    [[1,2,3,4,5],[0,2,3,4,5],[0,1,5,3,4],[0,1,2,4,5],[0,1,2,3,5],[0,1,3,4,2]]
+  ]
+}

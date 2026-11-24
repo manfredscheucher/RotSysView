@@ -1,0 +1,110 @@
+{
+  "supergroups": [
+    {
+      "id": "database",
+      "title": "Database",
+      "description": "Complete lists for small n.",
+      "groups": [
+        {
+          "id": "all",
+          "title": "All drawings of small K_n",
+          "description": "Every simple drawing of K_n for n ≤ 7 up to relabelling and mirroring, as counted in OEIS A276110.",
+          "links": [{"title": "Paper: Aichholzer, Hackl, Pilz, Ramos, Sacristán, Vogtenhuber: Empty triangles in good drawings of the complete graph", "url": "https://link.springer.com/article/10.1007/s00373-015-1550-5"}],
+          "files": [
+            "all/n4-all.json",
+            "all/n5-all.json",
+            "all/n6-all.json",
+            "all/n7-all.json"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat-framework",
+      "title": "SAT framework examples",
+      "description": "From the SAT framework rotsys-sat and its papers.",
+      "links": [
+        {"title": "Paper: Bergold, Scheucher: Investigating Simple Drawings of K_n using SAT", "url": "https://arxiv.org/abs/2504.02650"},
+        {"title": "Paper: Bergold, Felsner, Reddy, Scheucher: Using SAT to study plane Hamiltonian substructures in simple drawings", "url": "https://arxiv.org/abs/2305.09432"}
+      ],
+      "groups": [
+        {
+          "id": "convexity",
+          "title": "Not convex or not h-convex",
+          "description": "The forbidden configurations of convex and h-convex drawings.",
+          "links": [{"title": "Paper: Bergold, Scheucher: Investigating Simple Drawings of K_n using SAT", "url": "https://arxiv.org/abs/2504.02650"}],
+          "files": [
+            "convexity/n5-not-convex-1.json",
+            "convexity/n5-not-convex-2.json",
+            "convexity/n6-not-hconvex.json"
+          ]
+        },
+        {
+          "id": "all-edges-crossed",
+          "title": "Every edge crossed",
+          "description": "h-convex drawings in which every edge is crossed.",
+          "links": [{"title": "Paper: Bergold, Scheucher: Investigating Simple Drawings of K_n using SAT", "url": "https://arxiv.org/abs/2504.02650"}],
+          "files": [
+            "all-edges-crossed/n11-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n12-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n13-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n14-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n15-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n15-hconvex-all-edges-crossed-sub.json",
+            "all-edges-crossed/n16-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n17-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n18-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n19-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n20-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n21-hconvex-all-edges-crossed.json",
+            "all-edges-crossed/n22-hconvex-all-edges-crossed-sub.json"
+          ]
+        },
+        {
+          "id": "crossing-families",
+          "title": "No large crossing family",
+          "description": "No 4 edges pairwise cross.",
+          "links": [{"title": "Paper: Bergold, Scheucher: Investigating Simple Drawings of K_n using SAT", "url": "https://arxiv.org/abs/2504.02650"}],
+          "files": [
+            "crossing-families/n16-hconvex-no-4-crossing-family.json"
+          ]
+        },
+        {
+          "id": "avoiding",
+          "title": "Avoiding C_k and T_k",
+          "description": "Drawings without certain C_k or T_k.",
+          "links": [{"title": "Paper: Bergold, Scheucher: Investigating Simple Drawings of K_n using SAT", "url": "https://arxiv.org/abs/2504.02650"}],
+          "files": [
+            "avoiding/n12-gtwisted-no-T8.json",
+            "avoiding/n16-no-C5-T6.json",
+            "avoiding/n20-hconvex-no-C6.json",
+            "avoiding/n21-hconvex-no-C6.json",
+            "avoiding/n23-no-C6-T5.json"
+          ]
+        },
+        {
+          "id": "empty-triangles",
+          "title": "Empty triangles",
+          "description": "Harborth's conjecture: at least 2n−4 empty triangles. Aichholzer et al. prove at least n; their proof gives 2n−4 only for drawings with a lucky vertex.",
+          "links": [{"title": "Paper: Bergold, Felsner, Reddy, Scheucher: Using SAT to study plane Hamiltonian substructures in simple drawings", "url": "https://arxiv.org/abs/2305.09432"}],
+          "files": [
+            "empty-triangles/n8-unlucky.json",
+            "empty-triangles/n10-unlucky.json",
+            "empty-triangles/n11-hconvex-75-empty-triangles.json",
+            "empty-triangles/n12-hconvex-92-empty-triangles.json"
+          ]
+        },
+        {
+          "id": "plane-hc",
+          "title": "Plane Hamiltonian cycles",
+          "description": "Limits of stronger forms of Rafla's conjecture (every drawing has a plane Hamiltonian cycle).",
+          "links": [{"title": "Paper: Bergold, Felsner, Reddy, Scheucher: Using SAT to study plane Hamiltonian substructures in simple drawings", "url": "https://arxiv.org/abs/2305.09432"}],
+          "files": [
+            "plane-hc/n8-HC-not-extendable-2n-3.json",
+            "plane-hc/n11-noT5-HC-plus-star.json"
+          ]
+        }
+      ]
+    }
+  ]
+}

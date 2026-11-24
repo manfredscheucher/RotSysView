@@ -1,0 +1,6 @@
+[submodule "cadical-kotlin"]
+	path = cadical-kotlin
+	url = https://github.com/manfredscheucher/cadical-kotlin.git
+[submodule "ksat-common"]
+	path = ksat-common
+	url = https://github.com/manfredscheucher/ksat-common.git
