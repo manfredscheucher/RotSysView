@@ -4,6 +4,10 @@
   "group": "Avoiding C_k and T_k",
   "label": "n12-gtwisted-no-T8",
   "description": "Generalized twisted without T_8: N_gt(T8) > 12 (Section 5.5).",
+  "links": [
+    {"title": "Paper: Bergold, Scheucher: Investigating Simple Drawings of K_n using SAT", "url": "https://arxiv.org/abs/2504.02650"},
+    {"title": "Data: rotsys-sat examples on GitHub", "url": "https://github.com/manfredscheucher/rotsys-sat/tree/main/examples"}
+  ],
   "source": "rotsys-sat examples/unavoidable/n12_GT_noT8.json0",
   "rotation_systems": [
     [[1,2,3,4,5,6,7,8,9,10,11],[0,8,2,3,4,5,6,7,9,10,11],[0,8,7,6,5,3,4,9,1,11,10],[0,8,7,6,5,4,9,2,1,11,10],[0,8,7,6,5,9,3,2,1,11,10],[0,8,6,7,9,2,3,4,1,11,10],[0,8,7,9,2,3,4,5,1,11,10],[0,8,9,2,3,4,6,5,1,11,10],[0,9,10,11,1,2,3,4,5,6,7],[0,8,7,6,5,4,3,2,1,11,10],[0,8,1,11,2,3,4,5,6,7,9],[0,8,1,2,3,4,5,6,7,9,10]]

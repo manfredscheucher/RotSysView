@@ -71,15 +71,14 @@ the browser.
 All of these are in the Rotation system menu.
 
 **Examples...** lists the bundled rotation systems in two supergroups, each split into groups. Every
-supergroup and group can be opened; an open one starts with what it shows and links to the papers,
-where there are some. The sets of a group are ordered by n. Closing the node that holds the selected
+supergroup and group can be opened; an open one starts with what it shows. The sets of a group are ordered by n. Closing the node that holds the selected
 entry clears the selection.
 
 - Database
   - All drawings of small K_n: every simple drawing of K_n for n = 4 to 7 up to relabelling and
     mirroring, 2, 5, 102 and 11556 drawings, enumerated with rotsys-sat. The counts are those of
     Aichholzer et al. (enumerated up to n = 8) and OEIS A276110.
-- SAT framework examples (rotsys-sat; links to both SAT papers)
+- SAT framework examples (rotsys-sat)
   - Families: Perfect convex C_n (n = 4 to 20) and Perfect twisted T_n (n = 4 to 18), generated for
     the n you choose (default 6) with `−` and `+` or by typing.
   - Not convex or not h-convex: the forbidden configurations of convex and h-convex drawings.
@@ -88,7 +87,9 @@ entry clears the selection.
   - Empty triangles: Harborth's conjecture (at least 2n−4 empty triangles) and drawings without a
     lucky vertex. Plane Hamiltonian cycles: limits of stronger forms of Rafla's conjecture.
 
-The selected entry shows its description, n, the number of rotation systems and where the data is from.
+The selected entry shows its description, n and the number of rotation systems first, then its
+sources: papers, OEIS and data that contain it (several where several people found it), and where the
+bundled data is from.
 An entry with several rotation systems has "(k)" after its name and a number field with `−` and `+` to
 choose one ("1 of 102"; a number out of range disables Load). Load opens the whole set at the chosen
 member, so you can step through the others with `<` `>`. The dialog remembers its state while the app

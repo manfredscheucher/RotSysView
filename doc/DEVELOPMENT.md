@@ -48,8 +48,9 @@ are decoded when shown). `ExamplesTest` fails if a file is not in the index or t
 "groups": [{"id", "title", "description"?, "links"?, "files": [...]}]}]}`. Group ids are unique
 among all groups. The dialog's tree keys are `SG/<supergroup id>` and `G/<supergroup id>/<group id>`;
 the generated families (`ExampleFamily`, C_n and T_n for any n) are the first group of
-`sat-framework`, key `G/sat-framework/families`. A group's links are shown unless they are exactly
-its supergroup's (`sat-framework` links two papers, so each group shows its own).
+`sat-framework`, key `G/sat-framework/families`. The sources are on the sets (Manfred): supergroups
+and groups have no links, every set file has its own (`ExamplesTest` checks both), shown below the
+set's description and parameters.
 
 A file is the metadata, then the data, RotSysView's saved JSON format (Open reads it too):
 
@@ -68,8 +69,9 @@ A file is the metadata, then the data, RotSysView's saved JSON format (Open read
 }
 ```
 
-`"links"` (a list of `{"title", "url"}`) is optional; the dialog shows only those its group and
-supergroup do not show. The files were converted from the former catalogue in code by
+`"links"` is a list of `{"title", "url"}`: papers, OEIS and data that contain the set, several where
+several sources have it. A side remark goes into the title, e.g. "Data: Balogh, Lidický, Salazar,
+with mirror images counted separately". The files were converted from the former catalogue in code by
 `scripts/probe/ConvertExamplesProbe.kt` (one-off).
 
 Provenance:

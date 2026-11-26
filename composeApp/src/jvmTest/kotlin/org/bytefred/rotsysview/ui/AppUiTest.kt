@@ -168,10 +168,12 @@ class AppUiTest {
         onNodeWithText("Database").performClick()
         onNodeWithText("Complete lists for small n.").assertIsDisplayed()
         onNodeWithText("All drawings of small K_n").performClick()
-        // the group's own paper (the supergroup has none)
-        onNodeWithText("Paper: Aichholzer", substring = true).assertIsDisplayed()
+        // the sources show with the selected set, not with the group
+        onNodeWithText("Paper: Aichholzer", substring = true).assertDoesNotExist()
         onNodeWithText("n5-all (5)").performClick()
         onNodeWithTag("example-info").assertIsDisplayed()
+        onNodeWithText("Paper: Aichholzer", substring = true).assertIsDisplayed()
+        onNodeWithText("Data: Balogh, Lidický, Salazar", substring = true).assertIsDisplayed()
         // collapsing the group clears the selection, Load is disabled again
         onNodeWithText("All drawings of small K_n").performClick()
         assertNull(s.examples.selected)
@@ -183,15 +185,14 @@ class AppUiTest {
         assertEquals(5, s.rsSet.size)
         onNodeWithText("5 rotation systems loaded").assertIsDisplayed()
         onNodeWithText("OK").performClick()
-        // SAT framework examples (with the paper links) > Empty triangles > n8-unlucky
+        // SAT framework examples > Empty triangles > n8-unlucky, with its own papers
         onNodeWithText("Rotation system").performClick()
         onNodeWithText("Examples...").performClick()
         onNodeWithText("SAT framework examples").performClick()
-        onNodeWithText("Paper: Bergold, Scheucher", substring = true).assertIsDisplayed()
         onNodeWithText("Empty triangles").performScrollTo().performClick()
-        // the supergroup links two papers, so the group still shows its own
-        onAllNodesWithText("Paper: Bergold, Felsner", substring = true).assertCountEquals(2)
+        onNodeWithText("Paper: Bergold, Felsner", substring = true).assertDoesNotExist()
         onNodeWithText("n8-unlucky").performScrollTo().performClick()
+        onNodeWithText("Paper: Bergold, Felsner", substring = true).assertExists()
         onNodeWithText("Load").performClick()
         waitUntil(timeoutMillis = 10_000) { s.rs.n == 8 && s.currentDrawing != null }
         assertEquals(Examples.byName("n8-unlucky")!!.rotationSystem(0), s.rs)

@@ -4,6 +4,12 @@
   "group": "All drawings of small K_n",
   "label": "n7-all",
   "description": "All 11556 drawings of K_7.",
+  "links": [
+    {"title": "Paper: Bergold, Scheucher: Investigating Simple Drawings of K_n using SAT", "url": "https://arxiv.org/abs/2504.02650"},
+    {"title": "Paper: Aichholzer, Hackl, Pilz, Ramos, Sacristán, Vogtenhuber: Empty triangles in good drawings of the complete graph", "url": "https://link.springer.com/article/10.1007/s00373-015-1550-5"},
+    {"title": "OEIS A276110: number of simple drawings of K_n", "url": "https://oeis.org/A276110"},
+    {"title": "Data: Balogh, Lidický, Salazar, with mirror images counted separately", "url": "https://lidicky.name/pub/hill/"}
+  ],
   "source": "rotsys-sat rotsys.py 7 -a -lex",
   "rotation_systems": [
     [[1,2,3,4,5,6],[0,2,3,4,5,6],[0,1,3,4,5,6],[0,1,2,4,5,6],[0,1,2,3,5,6],[0,1,2,3,4,6],[0,1,2,3,4,5]],

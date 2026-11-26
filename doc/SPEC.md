@@ -3,6 +3,18 @@
 Newest first. Requests are Manfred's (summarized, quoted where useful), decisions and
 interpretations are recorded so that a reviewer can check them.
 
+## 2026-11-26: Sources on the examples
+
+Request (Manfred): sources belong to the examples, not to the groups (in ArrView the newest maximal
+triangles sets are new data, not on the old website); several sources per example are fine; the
+complete lists may name Lidický's data as a source with the side remark that it counts mirror images
+separately; in the opened example the description and parameters come first, the sources last ("auch
+bei pocoview bitte": forwarded to the PoCoView session).
+- `index.json` has no links; every set file has `"links"`. All drawings: Bergold and Scheucher,
+  Aichholzer et al., OEIS A276110, Lidický's data (mirror images counted separately). n8-unlucky also
+  Aichholzer et al. (Fig. 7, the only K_8 without a lucky vertex). Files without a paper link the
+  rotsys-sat examples on GitHub.
+
 ## 2026-11-24: Database from rotsys-sat, history squashed
 
 Request (Manfred): n5-all showed 6 drawings, the paper and OEIS A276110 count 5 (mirror images are

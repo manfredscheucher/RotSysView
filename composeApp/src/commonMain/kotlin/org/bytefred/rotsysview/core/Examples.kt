@@ -28,7 +28,7 @@ class ExampleGroup(
     val title: String,
     /** One or two short sentences, or null. */
     val description: String?,
-    /** Its own links; the dialog leaves them out when they are exactly the supergroup's. */
+    /** Its links (none in RotSysView: the sources are on the sets); left out when they are exactly the supergroup's. */
     val links: List<ExampleLink>,
 ) {
     override fun toString() = "${supergroup.id}/$id"
@@ -66,7 +66,7 @@ class ExampleSet internal constructor(
     val label: String,
     /** One short sentence (may be empty: the group's says it all). */
     val description: String,
-    /** Its own links; the dialog shows only those its group and supergroup do not show. */
+    /** Its sources (papers, OEIS, data), shown below its description and parameters. */
     val links: List<ExampleLink>,
     /** Where the data comes from, null if typed in. */
     val source: String?,
@@ -126,11 +126,14 @@ object Examples {
         val files = ArrayList<Pair<ExampleGroup, String>>()
         for (s in index.list("supergroups", INDEX)) {
             val so = jsonObject(s, INDEX)
+            // the sources are on the sets (Manfred), as in ArrView and PoCoView
+            require("links" !in so) { "$INDEX: supergroup '${so["id"]}' has links; they belong to its sets" }
             val sg = ExampleSupergroup(so.string("id", INDEX), so.string("title", INDEX), so.optString("description", INDEX), links(so, INDEX))
             require(supergroups.none { it.id == sg.id }) { "$INDEX: supergroup id '${sg.id}' twice" }
             supergroups += sg
             for (g in so.list("groups", INDEX)) {
                 val go = jsonObject(g, INDEX)
+                require("links" !in go) { "$INDEX: group '${go["id"]}' has links; they belong to its sets" }
                 val group = ExampleGroup(sg, go.string("id", INDEX), go.string("title", INDEX), go.optString("description", INDEX), links(go, INDEX))
                 groups += group
                 val paths = go.list("files", INDEX).map { it as? String ?: error("$INDEX: file names must be strings") }

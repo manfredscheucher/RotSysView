@@ -37,9 +37,9 @@ class ExamplesTest {
         assertTrue(Examples.familiesIn(db).isEmpty())
         assertEquals((4..7).map { "n$it-all" }, Examples.inGroup(Examples.group("all")).map { it.name })
         assertEquals(listOf(2, 5, 102, 11556), Examples.inGroup(Examples.group("all")).map { it.size })
-        assertEquals(listOf("https://arxiv.org/abs/2504.02650", "https://arxiv.org/abs/2305.09432"), sat.links.map { it.url })
-        // every group has links, its own or its supergroup's
-        for (g in Examples.groups) assertTrue(g.links.isNotEmpty() || g.supergroup.links.isNotEmpty(), g.id)
+        // the sources are on the sets (Manfred), not on the groups and supergroups
+        for (g in Examples.groups) assertTrue(g.links.isEmpty() && g.supergroup.links.isEmpty(), g.id)
+        for (set in Examples.sets) assertTrue(set.links.isNotEmpty(), set.name)
     }
 
     @Test
